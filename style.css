@@ -1,0 +1,284 @@
+/* General Styles */
+:root {
+--rubby-blue: #1289E7;
+--navy-blue: #2D3748;
+--white: #FFFFFF;
+--light-grey : #E0E4E8;
+--font-size-large: 2rem;
+--font-size-medium: 1rem;
+--font-size-small: 0.75rem;
+--font-family: 'Poppins', sans-serif;
+--title-font: 'Licorice', cursive;;
+}
+
+body {
+font-family: var(--font-family);
+color: var(--navy-blue);
+background-color: #fff;
+overflow-x: hidden;
+}
+
+
+
+.primary-btn {
+background-color: var(--navy-blue);
+color: white;
+border-color: var(--navy-blue);
+border-radius: 20px;
+}
+
+.primary-btn:hover {
+background-color: white;
+color: var(--navy-blue);
+border-color: var(--navy-blue);
+}
+
+.title {
+font-size: var(--font-size-large);
+color: var(--navy-blue);
+font-family: var(--title-font);
+font-weight: 600;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+background-color: var(--rubby-blue);
+border-bottom: #20283e;
+}
+.navbar-nav .nav-link {
+color: var(--white);
+margin: 0 0.5rem;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+color: var(--navy-blue);
+}
+
+
+/* Hero Section */
+#hero {
+background-image: url('images/heroSectionBackground.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+min-height: 100vh;
+padding: var(--hero-padding);
+color: var(--text-light);
+text-align: center;
+position: relative;
+overflow: hidden;
+animation: fadeIn 2s ease-in;
+overflow-x: hidden;
+width: 100vw; 
+margin: 0 auto; 
+}
+
+
+
+#hero .profile-img {
+width: 500px;
+height: 500px;
+object-fit: cover;
+}
+
+
+/* ===== About ===== */
+#aboutme {
+padding: 0 15rem;
+}
+.skills-icons  a{
+width: 48px;
+margin: 0.5rem;
+color: var(--navy-blue);
+text-decoration: none;
+}
+
+.skills-icons  i{
+  font-size: 2rem;
+  }
+
+/* Skills */
+
+.skills-pill {
+width: 120px;
+height: 180px;
+background-color: var(--raisin-black);
+border-radius: 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+padding: 20px 10px;
+transition: all 0.3s ease;
+text-decoration: none;
+text-align: center;
+background-color: var(--navy-blue);
+}
+
+.skills-pill:hover {
+background-color: var(--rubby-blue);
+transform: scale(1.05);
+}
+
+.pill-text {
+margin-top: 10px;
+}
+
+.pill-text .title {
+font-size: 0.9rem;
+font-weight: bold;
+margin-bottom: 5px;
+font-family: var(--font-family);
+}
+
+/* Services */
+#services .card {
+transition: transform 0.3s ease;
+background-color: var(--light-grey);
+border-color: var(--light-grey);
+margin-bottom: 3%;
+}
+
+#services .card i{
+color: var(--rubby-blue);
+font-size: 2.5rem;
+margin-bottom: 5%;
+margin-top: 5%;
+}
+
+#services .card:hover {
+transform: scale(1.05);
+color: var(--white);
+background-color: var(--rubby-blue);
+}
+
+#services .card:hover i {
+
+color: var(--white);
+
+}
+
+#services .card-title {
+color: var(--navy-blue);
+font-size: var(--font-size-medium);
+}
+
+#services .card-text {
+color: var(--navy-blue);
+font-size: var(--font-size-small);
+}
+
+/* Portfolio */
+#portfolio .card {
+margin-bottom: 3%;
+}
+
+#portfolio .card img {
+max-height: 200px;
+object-fit: cover;
+}
+
+#portfolio .link{
+color: var(--navy-blue);
+border-bottom: 1px solid var(--teal);
+}
+
+#portfolio .link:hover{
+color: var(--teal);
+}
+
+/* Contact Icons */
+.contact-pill {
+width: 90px;
+height: 120px;
+background-color: #2c3e50;
+border-radius: 45%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 30px;
+transition: all 0.3s ease;
+text-decoration: none;
+margin-right: 2%;
+}
+
+.contact-pill:hover {
+background-color: #1a252f;
+transform: scale(1.05);
+color: var(--accent-color);
+}
+
+
+
+/* ===== Feedback ===== */
+.custom-arrow {
+  width: 32px;
+  height: 32px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 16px;
+  z-index: 1;
+  position: absolute;
+  }
+  
+  .carousel-control-prev.custom-arrow {
+  left: -16px;
+  }
+  
+  .carousel-control-next.custom-arrow {
+  right: -16px;
+  }
+  
+  .custom-arrow:hover {
+  opacity: 1;
+  background-color: #ddd;
+  }
+  
+
+/* Footer */
+footer {
+  background-color: var(--rubby-blue);
+  }
+  
+  footer p {
+  color: #fff;
+  }
+  
+
+/* Responsive */
+@media (max-width: 768px) {
+#hero {
+  background-image: none;
+  background-color: #1C1E53;
+}
+#hero h1 {
+font-size: var(--font-size-large);
+}
+#hero .blob-container {
+margin: 0 auto;
+}
+#services .card-body {
+font-size: var(--font-size-medium);
+}
+
+.skill-cards {
+margin-left:0;
+}
+
+#aboutme {
+  width: 100%;
+  padding: 0;
+}
+
+}
